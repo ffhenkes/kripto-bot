@@ -1,0 +1,23 @@
+* Kripto Bot
+
+This is a simple bot to login and query kripto generating a file containing all secrets in order to export for a particular service.
+
+The idea here is to use a binary with user and password compiled within without exposing kripto user and password to the outside world.
+
+Kripto Bot accept via environment variables user and password that should be built in the final binary.
+
+The suggested strategy is to secure those variables in a CI mechanism and use it to build the bot, after that use the bot to request the variables from kripto and export it.
+
+The script *kshell.sh* is an usage example.
+
+** Build
+
+#+BEGIN_EXAMPLE
+make build
+#+END_EXAMPLE
+
+** Run example
+
+#+BEGIN_EXAMPLE
+make run
+#+END_EXAMPLE
