@@ -14,9 +14,13 @@ mkdir -p $GOPATH/$SRC && mv !(hack*) $GOPATH/$SRC
 
 shopt -u extglob
 
+GOTO=$PWD
+
 cd $GOPATH/$SRC
 
 go get -v -t ./...
 
 echo 'calling make: '$COMMAND
 make $COMMAND
+
+mv -f $BINARY $GOTO/$BINARY
